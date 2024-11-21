@@ -120,7 +120,7 @@ Applied various constraints for creating coupons :
             "details": "This coupon is not applicable on cart!!!",
             "message": "Bad Request"
         }
-     ```
+      ```
    
 
 ## Example of APIS Requests :
@@ -406,3 +406,5 @@ Applied various constraints for creating coupons :
       }
       ```
     
+# Test the service : 
+Import [postManCollection.json](MonCommerceAPIs.postman_collection.json) in postman and test the service.

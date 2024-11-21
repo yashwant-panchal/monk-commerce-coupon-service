@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "7b82ac88-4a08-42cf-a717-e68997ab4229",
+		"name": "MonCommerceAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33942406"
+	},
+	"item": [
+		{
+			"name": "ListAllCoupons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/coupons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCouponCartWise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"coupon_type\":\"CART_WISE\",\n    \"id\":\"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/coupons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCouponProductWise",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"coupon_type\":\"CART_WISE\",\n    \"id\":\"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/coupons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCouponBXGY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"coupon_type\":\"CART_WISE\",\n    \"id\":\"2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/coupons",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCouponById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"coupon_type\":\"BX_GY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/coupons/a0490db7-3393-4033-986c-f47d814f408e",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coupons",
+						"a0490db7-3393-4033-986c-f47d814f408e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCouponById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/coupons/db76fdf9-413d-427d-b2c0-f21ea7df4d9e",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coupons",
+						"db76fdf9-413d-427d-b2c0-f21ea7df4d9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCouponById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/coupons/a0490db7-3393-4033-986c-f47d814f408e",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"coupons",
+						"a0490db7-3393-4033-986c-f47d814f408e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ApplyCoupon",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ApplicableCoupons",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
