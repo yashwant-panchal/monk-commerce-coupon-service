@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- Override this variable if a different log pattern is needed -->
+    <!-- <property name="CONSOLE_LOG_PATTERN" value="%d %level %logger{50} : %msg%n"/> -->
+
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <logger name="com.monk" level="${LOG_LEVEL}"/>
+
+</configuration>
