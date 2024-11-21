@@ -30,5 +30,5 @@ public interface CouponExecutor<T> {
      * @param cart   the cart
      * @return the boolean
      */
-    boolean isCouponApplicableOnCart(COUPON coupon, Cart cart);
+    boolean isCouponApplicableOnCart(COUPON coupon, T cart);
 }
