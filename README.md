@@ -4,7 +4,7 @@ Monk Commerce Coupon Service
 ## Prerequisite to run the service : 
 1. Run time version should be > Java(17)
 2. Run the service using : ``./gradlew bootRun``
-3. If this file is missing : `src/main/resources/db/couponDB/COUPON_DB.mv.db`
+3. If this file is missing : [src/main/resources/db/couponDB/COUPON_DB.mv.db](src/main/resources/db/couponDB/COUPON_DB.mv.db)
       * Then Run the service.
       * Log into the H2-Console : http://localhost:8080/h2-console
       * JDBC Url : `jdbc:h2:file:./src/main/resources/db/couponDB/COUPON_DB`
@@ -13,15 +13,16 @@ Monk Commerce Coupon Service
       * Create COUPON table using this SQL statement :
         * ```roomsql
           CREATE TABLE COUPON (
-              id UUID DEFAULT RANDOM_UUID() PRIMARY KEY,  
-              coupon_type VARCHAR(255) NOT NULL,           
-              created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-              updated_at TIMESTAMP,                       
-              expires_at TIMESTAMP,                      
-              discount_percentage INT,  
-              conditions JSON,                            
-              description VARCHAR(255)
-          );
+               id UUID DEFAULT RANDOM_UUID() PRIMARY KEY,  
+               coupon_type VARCHAR(255) NOT NULL,           
+               created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+               updated_at TIMESTAMP,                       
+               expires_at TIMESTAMP,                      
+               discount_percentage INT,  
+               conditions JSON,                            
+               description VARCHAR(255),
+               CONSTRAINT CHK_EXPIRES_GT_CREATED CHECK (EXPIRES_AT > CREATED_AT)
+           );
           ```
 
 ## Implemented APIS 
